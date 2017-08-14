@@ -29,6 +29,7 @@ declare module JSONS {
         scoop: number;
         time: string;
         type: string;
+        readTime: string;
     }
 
 

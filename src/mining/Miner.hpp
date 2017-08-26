@@ -75,6 +75,7 @@ namespace Burst
 
 		void setMiningIntensity(Poco::UInt32 intensity);
 		void setMaxPlotReader(Poco::UInt32 max_reader);
+		static void setReadTime(std::string readTime);
 		static void setMaxBufferSize(Poco::UInt64 size);
 		void rescanPlotfiles();
 
@@ -97,5 +98,6 @@ namespace Burst
 		Poco::NotificationQueue verificationQueue_;
 		std::unique_ptr<Poco::ThreadPool> verifier_pool_, plot_reader_pool_;
 		mutable Poco::Mutex worker_mutex_;
+		static std::string readTime_;
 	};
 }

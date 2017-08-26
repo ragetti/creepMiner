@@ -487,7 +487,8 @@ Poco::JSON::Object Burst::createJsonNewBlock(const MinerData& data)
 	}
 	json.set("deadlinesConfirmed", std::to_string(data.getConfirmedDeadlines()));
 	json.set("deadlinesAvg", deadlineFormat(data.getAverageDeadline()));
-		
+	json.set("readTime", "1234");
+
 	Poco::JSON::Array bestDeadlines;
 
 	for (auto& historicalDeadline : data.getAllHistoricalBlockData())

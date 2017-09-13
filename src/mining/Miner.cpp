@@ -639,7 +639,7 @@ void Burst::Miner::rescanPlotfiles()
 		data_.getBlockData()->refreshPlotDirs();
 	}
 }
-static Burst::Miner::setReadTime(std::string readTime)
+void Burst::Miner::setReadTime(std::string readTime)
 {
 	Poco::Mutex::ScopedLock lock(worker_mutex_);
 	readTime_ = readTime;

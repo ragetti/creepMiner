@@ -33,7 +33,7 @@
 #include <functional>
 #include <Poco/BasicEvent.h>
 #include <Poco/Message.h>
-#include <Poco/Data/Session.h>
+#include <Poco/SQL/Session.h>
 
 namespace Burst
 {
@@ -190,7 +190,7 @@ namespace Burst
 		std::shared_ptr<BlockData> blockData_ = nullptr, lastBlockData_ = nullptr;
 		mutable Poco::Mutex mutex_;
 
-		std::unique_ptr<Poco::Data::Session> dbSession_ = nullptr;
+		std::unique_ptr<Poco::SQL::Session> dbSession_ = nullptr;
 
 		Poco::ActiveMethod<Poco::UInt64, std::pair<const Wallet*, const Accounts*>, MinerData,
 						   Poco::ActiveStarter<MinerData>> activityWonBlocks_;
